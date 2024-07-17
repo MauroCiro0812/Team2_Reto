@@ -4,15 +4,15 @@
 }
 
 body{
-    background-color: black;
+    background-color: #060724;
     color: white;
 }
 
 header{
-    height: 3rem;
+    height: 4rem;
     background-color: white;
     color: black;
-    padding: 20px;
+    padding: 40px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -61,7 +61,7 @@ nav{
     height: 40px;
     width: 180px;
     color:white;
-    background-color: blue;
+    background-color: #004AAD;
     border-radius: 0.6rem;
     border: none;
     font-size: 1.3rem;
@@ -101,4 +101,42 @@ main p, main a{
 
 main a:hover{
     text-decoration: underline;
+}
+
+.juego {
+    background-image: url(../Imagenes/multi-city.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    height: 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.juego div {
+    width: 35%;
+    height: 35%;
+    background-color: white;
+    opacity: 0.6;
+}
+
+.juego div p{
+    margin-top: 10%;
+    color: black;
+    opacity: 1;
+}
+
+footer {
+    height: 6rem;
+    display: flex;
+    align-items: center;
+
+    div {
+        margin-left: 70%;
+    }
+    
+
 }
