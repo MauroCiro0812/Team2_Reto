@@ -4,15 +4,15 @@
 }
 
 body{
-    background-color: #060724;
+    background-color: black;
     color: white;
 }
 
 header{
-    height: 4rem;
+    height: 3rem;
     background-color: white;
     color: black;
-    padding: 40px;
+    padding: 20px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -57,38 +57,19 @@ nav{
 }
 
 
-/* .boton-inicio{
-    display: flex;
-    align-self: flex-end;
-    height:52px;
-    width: auto;
+.boton-inicio{
+    height: 40px;
+    width: 180px;
     color:white;
-    background-color: #004AAD;
+    background-color: blue;
     border-radius: 0.6rem;
     border: none;
     font-size: 1.3rem;
-    justify-content: center;
-    text-align: center;
     
     &:hover{
         background-color: rgb(93, 93, 170);
     }
-} */
-
-.btn-bd-primary {
-    --bs-btn-font-weight: 600;
-    --bs-btn-color: var(--bs-white);
-    --bs-btn-bg: var(--bd-violet-bg);
-    --bs-btn-border-color: var(--bd-violet-bg);
-    --bs-btn-hover-color: var(--bs-white);
-    --bs-btn-hover-bg: #{shade-color($bd-violet, 10%)};
-    --bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
-    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-    --bs-btn-active-color: var(--bs-btn-hover-color);
-    --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
-    --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
 }
-
 
 nav ul li{
     display: inline-block;
@@ -121,43 +102,3 @@ main p, main a{
 main a:hover{
     text-decoration: underline;
 }
-
-.juego {
-    background-image: url(../Imagenes/multi-city.png) ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: scroll;
-    height: 35rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.juego div {
-    width: 35%;
-    height: 35%;
-    background-color: white;
-    opacity: 0.6;
-}
-
-.juego div p{
-    margin-top: 10%;
-    color: black;
-    opacity: 1;
-}
-
-footer {
-    height: 6rem;
-    display: flex;
-    align-items: center;
-
-    div {
-        margin-left: 70%;
-    }
-    
-
-}
-
-
