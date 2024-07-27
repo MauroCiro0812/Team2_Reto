@@ -101,3 +101,46 @@ nav{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.continue{
+    display: flex;
+    justify-content: center;
+
+    & .btn a{
+        color: white;
+        text-decoration: none;
+    }
+
+}
+
+/*.continue2{
+    display: flex;
+    justify-content: flex-end;
+
+    & .btn a{
+        color: white;
+        text-decoration: none;
+    }
+
+}
+
+.anterior{
+    display: flex;
+    justify-content: flex-end;
+
+    & .btn a{
+        color: white;
+        text-decoration: none;
+    }
+
+}*/
+
+.botones{
+    display: flex;
+    justify-content: space-evenly;
+
+    & .btn a{
+        color: white;
+        text-decoration: none;
+    }
+}
