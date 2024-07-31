@@ -64,6 +64,8 @@ nav{
     }
 }
 
+
+
 .card:hover{
     width: 20rem;
     height: 17rem;
@@ -88,7 +90,7 @@ nav{
     border-radius: 50%;
     position: relative;
     cursor: pointer;
-  }
+}
 
 .selector input[type="radio"]:checked::after {
     content: "";
@@ -111,6 +113,12 @@ nav{
         text-decoration: none;
     }
 
+}
+
+main#fondo-imagen {
+    min-height: 100vh; /* Altura mínima para que el fondo sea visible */
+    background-size: cover; /* Asegura que la imagen de fondo cubra todo el main */
+    background-position: center; /* Centra la imagen de fondo */
 }
 
 /*.continue2{
@@ -137,7 +145,8 @@ nav{
 
 .botones{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    padding: 10px;
 
     & .btn a{
         color: white;

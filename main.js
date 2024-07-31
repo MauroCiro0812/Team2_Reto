@@ -3,9 +3,9 @@
         var colorFondo = document.getElementById("colorFondo").value;
         document.getElementById("cuerpo").setAttribute("bgcolor", colorFondo);
     })
-})
+})*/
 
-function seleccionarTarjeta() {
+/*function seleccionarTarjeta() {
     const inputPlaya = document.getElementById('playa');
     const inputMontaña = document.getElementById('montaña');
     const inputCiudad = document.getElementById('ciudad');
@@ -14,25 +14,25 @@ function seleccionarTarjeta() {
     
     if (inputPlaya.checked) {
         inputPlaya.innerHTML = 'Playa';
-        imagenMostrada.src = '';
+        imagenMostrada.src = '../Imagenes/1-playa.jpg';
         imagenMostrada.style.display = 'block';
-        document.getElementById('playa').style.display = 'block';
-        document.getElementById('montaña').style.display = 'none';
-        document.getElementById('ciudad').style.display = 'none';
+        document.getElementById('playa').style.backgroundImage = 'block';
+        document.getElementById('montaña').style.backgroundImage = 'none';
+        document.getElementById('ciudad').style.backgroundImage = 'none';
     } else if (inputMontaña.checked) {
         inputMontaña.innerHTML = 'Montaña';
-        imagenMostrada.src = '';
+        imagenMostrada.src = '../Imagenes/2-montaña.jpg';
         imagenMostrada.style.display = 'block';
-        document.getElementById('playa').style.display = 'none';
-        document.getElementById('montaña').style.display = 'block';
-        document.getElementById('ciudad').style.display = 'none';
+        document.getElementById('playa').style.backgroundImage = 'none';
+        document.getElementById('montaña').style.backgroundImage = 'block';
+        document.getElementById('ciudad').style.backgroundImage = 'none';
     } else if (inputCiudad.checked) {
         inputMontaña.innerHTML = 'Ciudad';
-        imagenMostrada.src = '';
+        imagenMostrada.src = '../Imagenes/3-ciudad.jpg';
         imagenMostrada.style.display = 'block';
-        document.getElementById('playa').style.display = 'none';
-        document.getElementById('montaña').style.display = 'none';
-        document.getElementById('ciudad').style.display = 'block';
+        document.getElementById('playa').style.backgroundImage = 'none';
+        document.getElementById('montaña').style.backgroundImage = 'none';
+        document.getElementById('ciudad').style.backgroundImage = 'block';
 
         
     } else {
@@ -42,7 +42,7 @@ function seleccionarTarjeta() {
 
 }*/
 
-const main=document.main;
+/*const main=document.main;
 const cards=document.querySelectorAll('input[type="radio"]');
 
 cards.forEach(card => {
@@ -50,5 +50,37 @@ cards.forEach(card => {
         const backGroundImage=document.querySelector('input[name="card"]:checked').value;
 
         main.style.backgroundImage=backGroundImage;
+    });
+});*/
+
+/*document.addEventListener('DOMContentLoaded', function() {
+    
+    const fondoImagen = document.getElementById('fondo-imagen');
+    
+    const radios = document.querySelectorAll('input[name="card"]');
+
+    function actualizarFondo() {
+        
+        radios.forEach(radio => {
+            if (radio.checked) {
+                const valor = radio.value;
+                fondoImagen.style.backgroundImage = `url('../Imagenes/${valor}.jpg')`;
+                fondoImagen.style.backgroundSize = 'cover';
+                fondoImagen.style.backgroundPosition = 'center'; 
+            }
+        });
+    }
+    
+    radios.forEach(radio => {
+        radio.addEventListener('change', actualizarFondo);
+    });
+});*/
+
+document.querySelectorAll('input[name="card"]').forEach((radio) => {
+    radio.addEventListener('change', function() {
+        const selectedValue = this.value;
+        console.log(`Radio button selected: ${selectedValue}`);
+        const mainElement = document.getElementById('fondo-imagen');
+        mainElement.style.backgroundImage = `url('../Imagenes/${selectedValue}.jpg')`;
     });
 });
