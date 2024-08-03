@@ -152,4 +152,8 @@ main#fondo-imagen {
         color: white;
         text-decoration: none;
     }
+
+    & .listo{
+        padding: 30px;
+    }
 }
