@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -18,17 +19,9 @@ header{
     align-items: center;
     justify-content: space-between;
 }
-.mapamundi{
-    width: 40%;
-}
 
-.mapamundi img{
-    width: 100%;
-}
 
 .welcome{
-    
-    background-image: url(../Imagenes/imagen.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -110,6 +103,14 @@ span{
     color: aqua;
 }
  
+main{
+    background-image: url(../Imagenes/imagen.jpg);
+    background-repeat: no repeat;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+
 main p, main a{
     color: white;
     font-size: 30px;
@@ -142,11 +143,19 @@ main a:hover{
     opacity: 0.6;
 }
 
+.btn a{
+    color: white;
+    text-decoration: none;
+}
+
+
 .juego div p{
     margin-top: 10%;
     color: black;
     opacity: 1;
 }
+
+
 
 footer {
     height: 6rem;
@@ -161,5 +170,6 @@ footer {
         font-size: 1.5rem;
     }
 }
+
 
 

@@ -2,7 +2,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url(/Imagenes/FondoPlanes.jpg);   
+    background-image: url(/Imagenes/FondoPlanes.jpg); 
+    background-size: cover;
 }
 
 header{

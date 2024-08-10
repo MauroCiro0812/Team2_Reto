@@ -25,20 +25,14 @@
           <a href="index.html">INICIO</a>
         </li>
         <li>
-          <a href="#">DESTINOS</a>
+          <a href="./Pages/s1_p1.html">DESTINOS</a>
         </li>
       </ul>
     </nav>
     <div>
-      <!-- <button onclick="document.getElementById('id01').style.display='block'" type="button"
-        class="btn btn-primary">Inicio de sesión</button> -->
-      <!-- Button trigger modal -->
-      <!-- Button trigger modal -->
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Inicio de sesión
       </button>
-
-      <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
           <div class="modal-content">
@@ -47,80 +41,78 @@
                 <div class="user_options-container">
                   <div class="user_options-text">
                     <div class="user_options-unregistered">
-                      <h2 class="user_unregistered-title">Don't have an account?</h2>
-                      <img src="./Imagenes/Inicio-de-sesión.jpg" alt="" >
-                      <button class="user_unregistered-signup" id="signup-button">Sign up</button>
+                      <h2 class="user_unregistered-title">¿No tienes cuenta?</h2>
+                      <!-- <img src="./Imagenes/Fondo-Login.jpeg" alt="" > -->
+                      <button class="user_unregistered-signup" id="signup-button">Registrate</button>
                     </div>
 
                     <div class="user_options-registered">
-                      <h2 class="user_registered-title">Have an account?</h2>
-                      <img src="./Imagenes/Inicio-de-sesión.jpg" alt="" >
-                      <button class="user_registered-login" id="login-button">Login</button>
+                      <h2 class="user_registered-title">¿Tienes cuenta?</h2>
+                      <!-- <img src="./Imagenes/Fondo-Login.jpeg" alt="" > -->
+                      <button class="user_registered-login" id="login-button">Inicia Sesión</button>
                     </div>
                   </div>
 
                   <div class="user_options-forms" id="user_options-forms">
                     <div class="user_forms-login">
-                      <h2 class="forms_title">Login</h2>
+                      <h2 class="forms_title">Inicio de Sesión</h2>
                       <form class="forms_form">
                         <fieldset class="forms_fieldset">
                           <div class="forms_field">
-                            <input type="email" placeholder="Email" class="forms_field-input" required autofocus />
+                            <input type="email" placeholder="Correo Electrónico" class="forms_field-input" required autofocus />
                           </div>
                           <div class="forms_field">
-                            <input type="password" placeholder="Password" class="forms_field-input" required />
+                            <input type="password" placeholder="Contraseña" class="forms_field-input" required />
                           </div>
                         </fieldset>
                         <div class="check">
-                          <input type="checkbox" name="remember" id="remember" required> Remember me
+                          <input type="checkbox" name="remember" id="remember" required> Recuerdame
                         </div>
                         <div class="forms_buttons">
-                          <button type="button" class="forms_buttons-forgot">Forgot password?</button>
+                          <button type="button" class="forms_buttons-forgot">¿Olvidaste tu contraseña?</button>
                         </div>
                         <div class="btn-login">
-                          <input type="submit" value="Log In" class="forms_buttons-action">
+                          <input type="submit" value="Iniciar Sesión" class="forms_buttons-action">
                         </div>
                         <div class="icons">
                           <i class="bi bi-facebook"></i>
                           <i class="bi bi-envelope"></i>
-                          <i class="bi bi-apple"></i>
                           <i class="bi bi-linkedin"></i>
                         </div>
                       </form>
                     </div>
                     <div class="user_forms-signup">
-                      <h2 class="forms_title">Sign Up</h2>
+                      <h2 class="forms_title">Registro</h2>
                       <form class="forms_form">
                         <fieldset class="forms_fieldset">
                           <div class="forms_field">
-                            <input type="text" placeholder="Full Name" class="forms_field-input" required />
+                            <input type="text" placeholder="Nombre Completo" class="forms_field-input" required />
                           </div>
                           <div class="forms_field">
-                            <input type="email" placeholder="Email" class="forms_field-input" required />
+                            <input type="email" placeholder="Correo Electrónico" class="forms_field-input" required />
                           </div>
                           <div class="forms_field">
-                            <input type="text" placeholder="Number contact" class="forms_field-input" required />
+                            <input type="text" placeholder="Número de Contacto" class="forms_field-input" required />
                           </div>
                           <div class="forms_field">
-                            <input type="password" placeholder="Password" class="forms_field-input" required />
+                            <input type="password" placeholder="Contraseña" class="forms_field-input" required />
                           </div>
                           <div class="forms_field">
-                            <input type="password" placeholder="Password Confirmation" class="forms_field-input" required />
+                            <input type="password" placeholder="Confirmar Contraseña" class="forms_field-input" required />
                           </div>
                           <div class="forms_field">
-                            <input type="date" placeholder="birthdate" class="forms_field-input" required  />
+                            <input type="date" placeholder="Fecha de Nacimiento" class="forms_field-input" required  />
                           </div>
                           <div class="check">
-                            <input type="checkbox" name="remember" id="remember" required> I have read and agreed to the Terms of Service and Privacy Policy
+                            <input type="checkbox" name="remember" id="remember" required> Estoy de acuerdo y he leído las <a href="https://amadeus.com/es/politicas/politicas-de-amadeus" target="_blank"> Politicas de Privacidad </a>
                           </div>
                         </fieldset>
                         <div class="forms_buttons">
-                          <input type="submit" value="Sign up" class="forms_buttons-action">
+                          <input type="submit" value="Registrarse" class="forms_buttons-action">
                         </div>
                         <div class="icons">
                           <i class="bi bi-facebook"></i>
                           <i class="bi bi-envelope"></i>
-                          <i class="bi bi-apple"></i>
                           <i class="bi bi-linkedin"></i>
                         </div>
                       </form>
@@ -128,15 +120,6 @@
                   </div>
                 </div>
               </section>
-              <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
-              <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button> -->
             </div>
           </div>
         </div>
@@ -145,16 +128,10 @@
   </header>
   <main>
     <div class="welcome">
-      <!-- <section>
-                <img class="bosque" src="Imagenes/imagen.jpg" alt="" >
-            </section> -->
-      <div>
+      <div class="ms-5">
         <h1><span>Hola.</span><br>Somos<span> Ama</span>deus</h1>
-        <P>Quieres conocer cual es tu destino ideal</P>
+        <P class="my-3">Quieres conocer cual es tu destino ideal</P>
         <a href="./Pages/s1_p1.html">visita nuestro cuestionario</a>
-      </div>
-      <div class="mapamundi">
-        <img src="./Imagenes/Mapamundi.png" alt="">
       </div>
     </div>
   </main>
@@ -162,17 +139,38 @@
 
     <div class="row m-0">
       <div class="col-2"></div>
-      <div class="col-8">
+      <div class="col-8 m-5 ms-0">
         <div id="carouselExample" class="carousel slide">
-          <div class="carousel-inner">
+          <div class="carousel-inner rounded-3">
             <div class="carousel-item active">
               <img src="./Imagenes/1-paris.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-              <img src="./Imagenes/2-madrid.jpg" class="d-block w-100" alt="...">
+              <img src="./Imagenes/cartagena.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./Imagenes/interlaken.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
               <img src="./Imagenes/3-NewYork.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./Imagenes/Machu-Picchu.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./Imagenes/ibiza.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./Imagenes/Tulum.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./Imagenes/Londres.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./Imagenes/roma.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./Imagenes/innsbruck.jpg" class="d-block w-100" alt="...">
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -198,15 +196,15 @@
       <div class="col-2"></div>
     </div>
     <footer class="bg-light">
-      <i class="bi bi-linkedin text-black ms-5 me"></i>
+      <a href="https://www.linkedin.com/company/amadeus/"><i class="bi bi-linkedin text-black ms-5 me"></i></a>
 
-      <i class="bi bi-twitter text-black m-2"></i>
+      <a href="https://x.com/AmadeusITGroup"><i class="bi bi-twitter text-black m-2"></i></a>
 
-      <i class="bi bi-facebook text-black m-2"></i>
+      <a href="https://www.facebook.com/AmadeusITGroup/"><i class="bi bi-facebook text-black m-2"></i></a>
 
-      <i class="bi bi-instagram text-black m-2"></i>
+      <a href="https://www.instagram.com/amadeusitgroup/"> <i class="bi bi-instagram text-black m-2"></i></a>
 
-      <i class="bi bi-youtube text-black m-2"></i>
+      <a href="https://www.youtube.com/user/AmadeusITGroup"><i class="bi bi-youtube text-black m-2"></i></a>
 
       <div class="btn-group dropstart ">
         <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
