@@ -74,7 +74,7 @@ cards.forEach(card => {
     radios.forEach(radio => {
         radio.addEventListener('change', actualizarFondo);
     });
-});*/
+});
 
 document.querySelectorAll('input[name="card"]').forEach((radio) => {
     radio.addEventListener('change', function() {
@@ -83,4 +83,27 @@ document.querySelectorAll('input[name="card"]').forEach((radio) => {
         const mainElement = document.getElementById('fondo-imagen');
         mainElement.style.backgroundImage = `url('../Imagenes/${selectedValue}.jpg')`;
     });
-});
+});*/
+
+function validarSeleccion(event) {
+    // Obtén todos los radio buttons con nombre "card"
+    var radios = document.getElementsByName('card');
+    var seleccionado = false;
+
+    // Recorre todos los radio buttons para ver si alguno está seleccionado
+    for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+            seleccionado = true;
+            break;
+        }
+    }
+
+    // Si no hay ninguno seleccionado, muestra una alerta
+    if (!seleccionado) {
+        alert('Por favor, selecciona una opción.');
+        event.preventDefault(); // Previene la navegación
+        return false; // Previene el envío del formulario
+    }
+
+    return true; // Permite el envío del formulario si fuera un submit
+}
