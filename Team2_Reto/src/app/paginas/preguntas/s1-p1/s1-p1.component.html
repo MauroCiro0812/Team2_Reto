@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<body>
+<main id="fondo-imagen">
+    <div class="titulo-destino">  
+        <h2>¿Qué tipo de entorno prefieres para tus vacaciones?</h2>
+    </div>
+    <form>
+          <div class="cards" >
+            <div class="card" >
+                <img src="../../../../assets/Imagenes/1-playa.jpg" class="playa" alt="playa">
+                <h5 class="title">Playa</h5>
+                <div class="selector"><input type="radio" name="card" value="playa" class="playa"></div>
+              </div>
+
+              <div class="card" >
+                <img src="../../../../assets/Imagenes/2-montaña.jpg" class="montaña" alt="montaña">
+                <h5 class="card-title">Montaña</h5>
+                <div class="selector"><input type="radio" name="card" value="montaña" class="montaña"></div>
+              </div>
+
+              <div class="card" >
+                <img src="../../../../assets/Imagenes/3-ciudad.jpg" class="ciudad" alt="ciudad">
+                <h5 class="card-title">Ciudad</h5>
+                <div class="selector"><input type="radio" name="card" value="ciudad" class="ciudad"></div>
+              </div>
+          </div>
+
+          <div class="botones">
+            <button type="button" class="btn btn-primary p-2" (click)="validarSeleccion($event)"><a routerLink="/preguntas/s1-p2">Siguiente</a></button>
+          </div>    
+        </form>
+</main>
+</body>

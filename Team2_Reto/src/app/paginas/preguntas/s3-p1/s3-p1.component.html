@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+<body>
+    <main id="fondo-imagen">
+        <div class="titulo-destino">
+          <h2>¿Qué tipo de actividades prefieres hacer durante tus vacaciones?</h2>
+        </div>
+        <section>
+  
+            <div class="cards">
+            <div class="card">
+              <img
+                src="../../../../assets/Imagenes/Deporte y Aventura.jpg"
+                class="clima-seco"
+                alt="Clima seco"/>
+              <h5 class="title">Deporte y Aventuras</h5>
+              <div class="selector">
+                <input type="radio" name="card" class="clima-seco" />
+              </div>
+            </div>
+  
+            <div class="card">
+              <img
+                src="../../../../assets/Imagenes/Museo-Cultura.jpg"
+                class="poca-lluvia"
+                alt="Lluvia"/>
+              <h5 class="card-title">Cultura y Museo</h5>
+              <div class="selector">
+                <input type="radio" name="card" class="poca-lluvia" />
+              </div>
+            </div>
+  
+            <div class="card">
+              <img
+                src="../../../../assets/Imagenes/Relax y bienestar.jpg"
+                class="lluvia-ocasional"
+                alt="Lluvia ocasional"/>
+              <h5 class="card-title">Relax y Bienestar</h5>
+              <div class="selector">
+                <input type="radio" name="card" class="lluvia-ocasional" />
+              </div>
+            </div>
+          </div>
+  
+          <div class="botones">
+            <div class="anterior">
+              <button type="button" class="btn btn-danger p-2">
+                <a routerLink="/preguntas/s2-p2">Anterior</a>
+              </button>
+            </div>
+  
+            <div class="listo">
+              <button type="button" class="btn btn-success p-2"><a routerLink="/preguntas/planes">¡Estoy listo!</a></button>
+            </div>
+  
+            <div class="continue2">
+              <button type="button" class="btn btn-primary p-2" (click)="validarSeleccion($event)">
+                <a routerLink="/preguntas/s3-p2" >Siguiente</a></button>
+            </div>
+          </div>
+  
+  
+        </section>
+      </main>
+  
+</body>

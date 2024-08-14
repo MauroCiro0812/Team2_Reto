@@ -1,0 +1,176 @@
+*{
+    /* margin: 0; */
+    /* padding: 0; */
+    box-sizing: border-box;
+}
+
+.body{
+    background-color: #060724;
+    color: white;
+}
+
+header{
+    height: 4rem;
+    background-color: white;
+    color: black;
+    padding: 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.welcome{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+}
+
+
+.icono{
+    margin: 10px 20px;
+    width: 60px;
+    height: 60px;
+}
+
+
+nav{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+
+/* .boton-inicio{
+    display: flex;
+    align-self: flex-end;
+    height:52px;
+    width: auto;
+    color:white;
+    background-color: #004AAD;
+    border-radius: 0.6rem;
+    border: none;
+    font-size: 1.3rem;
+    justify-content: center;
+    text-align: center;
+    
+    &:hover{
+        background-color: rgb(93, 93, 170);
+    }
+} */
+
+.btn-bd-primary {
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: #ffffff; /* var(--bs-white) */
+    --bs-btn-bg: #7a5bda; /* var(--bd-violet-bg) */
+    --bs-btn-border-color: #7a5bda; /* var(--bd-violet-bg) */
+    --bs-btn-hover-color: #ffffff; /* var(--bs-white) */
+    --bs-btn-hover-bg: #6c4fc4; /* 10% más oscuro que #7a5bda */
+    --bs-btn-hover-border-color: #6c4fc4; /* 10% más oscuro que #7a5bda */
+    --bs-btn-focus-shadow-rgb: 122, 91, 218; /* var(--bd-violet-rgb) */
+    --bs-btn-active-color: #ffffff; /* Igual que --bs-btn-hover-color */
+    --bs-btn-active-bg: #5f45ad; /* 20% más oscuro que #7a5bda */
+    --bs-btn-active-border-color: #5f45ad; /* 20% más oscuro que #7a5bda */
+}
+
+
+
+nav ul li{
+    display: inline-block;
+    margin: 0 20px;
+    
+    a {
+        text-decoration: none;
+        color: rgb(77, 74, 74);
+    }
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+h1{
+    color: white;
+}
+span{
+    color: aqua;
+}
+ 
+main{
+    background-image: url(../../../assets/Imagenes/imagen.jpg);
+    background-repeat: no repeat;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+
+main p, main a{
+    color: white;
+    font-size: 30px;
+    font-weight: 90;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+main a:hover{
+    text-decoration: underline;
+}
+
+.juego {
+    background-image: url(../../../assets/Imagenes/multi-city.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    height: 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.juego div {
+    width: 35%;
+    height: 35%;
+    background-color: white;
+    opacity: 0.6;
+}
+
+.btn a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.juego div p{
+    margin-top: 10%;
+    color: black;
+    opacity: 1;
+}
+
+
+
+footer {
+    height: 6rem;
+    display: flex;
+    align-items: center;
+
+    div {
+        margin-left: 70%;
+    }
+    
+    i{
+        font-size: 1.5rem;
+    }
+}
+
+
+

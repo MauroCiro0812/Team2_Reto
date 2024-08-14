@@ -1,0 +1,44 @@
+<app-navbar></app-navbar>
+<body>
+    <main id="fondo-imagen">
+        <div class="titulo-destino">  
+            <h2>¿Qué tipo de alojamiento prefieres?</h2>
+        </div>
+        <section>
+              <div class="cards" >
+                <div class="card" >
+                    <img src="../../../../assets/Imagenes/lujo.jpg" class="Hotel" alt="Hotel">
+                    <h5 class="title">Hotel de lujo</h5>
+                    <div class="selector"><input type="radio" name="card" class="Hotel"></div>
+                  </div>
+
+                  <div class="card" >
+                    <img src="../../../../assets/Imagenes/hostal.jpg" class="Hostal" alt="Hostal">
+                    <h5 class="card-title">Hostal o albergue</h5>
+                    <div class="selector"><input type="radio" name="card" class="Hostal"></div>
+                  </div>
+
+                  <div class="card" >
+                    <img src="../../../../assets/Imagenes/airbnb.jpg" class="Airbnb" alt="Airbnb">
+                    <h5 class="card-title">Airbnb o apartamento</h5>
+                    <div class="selector"><input type="radio" name="card" class="Airbnb"></div>
+                  </div>
+              </div>
+              
+              <div class="botones">
+              <div class="anterior">
+                <button type="button" class="btn btn-danger p-2"><a routerLink="/preguntas/s3-p2">Anterior</a></button>
+              </div>
+
+              <div class="listo">
+                <button type="button" class="btn btn-success p-2"><a routerLink="/preguntas/planes">¡Estoy listo!</a></button>
+              </div>
+
+              <div class="continue2">
+                <button type="button" class="btn btn-primary p-2" (click)="validarSeleccion($event)" ><a routerLink="/preguntas/s4-p2">Siguiente</a></button>
+              </div>  
+            </div>  
+        </section>
+    </main>
+
+</body>

@@ -1,0 +1,66 @@
+<app-navbar></app-navbar>
+<body>
+    <main id="fondo-imagen">
+        <div class="titulo-destino">
+          <h2>¿Cuántos días de actividades intensas puedes disfrutar antes de necesitar un descanso?</h2>
+        </div>
+        <section>
+  
+            <div class="cards">
+            <div class="card">
+              <img
+                src="../../../../assets/Imagenes/1-2días.jpg"
+                class="clima-seco"
+                alt="Clima seco"
+              />
+              <h5 class="title">1 - 2 días</h5>
+              <div class="selector">
+                <input type="radio" name="card" class="clima-seco" />
+              </div>
+            </div>
+  
+            <div class="card">
+              <img
+                src="../../../../assets/Imagenes/3-5dias.jpg"
+                class="poca-lluvia"
+                alt="Lluvia"
+              />
+              <h5 class="card-title">3 - 5 días</h5>
+              <div class="selector">
+                <input type="radio" name="card" class="poca-lluvia" />
+              </div>
+            </div>
+  
+            <div class="card">
+              <img
+                src="../../../../assets/Imagenes/mas5días.jpg"
+                class="lluvia-ocasional"
+                alt="Lluvia ocasional"
+              />
+              <h5 class="card-title">Más de 5 días</h5>
+              <div class="selector">
+                <input type="radio" name="card" class="lluvia-ocasional" />
+              </div>
+            </div>
+          </div>
+  
+          <div class="botones">
+            <div class="anterior">
+              <button type="button" class="btn btn-danger p-2">
+                <a routerLink="/preguntas/s5-p1">Anterior</a>
+              </button>
+            </div>
+  
+            <div class="listo">
+              <button type="button" class="btn btn-success p-2"><a routerLink="/preguntas/planes">¡Estoy listo!</a></button>
+            </div>
+  
+            <div class="continue2">
+              <button type="button" class="btn btn-primary p-2" (click)="validarSeleccion($event)" >
+                <a routerLink="/preguntas/s6-p1">Siguiente</a></button>
+            </div>
+          </div>
+        </section>
+      </main>
+  
+</body>

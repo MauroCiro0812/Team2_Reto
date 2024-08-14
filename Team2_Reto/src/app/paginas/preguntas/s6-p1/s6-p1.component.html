@@ -1,0 +1,61 @@
+<app-navbar></app-navbar>
+<body>
+    <main id="fondo-imagen">
+        <div class="titulo-destino">
+          <h2>¿Cuál es tu rango de edad?</h2>
+        </div>
+        <section>
+  
+            <div class="cards">
+            <div class="card">
+              <img
+                src="../../../../assets/Imagenes/30years.jpg"
+                class="clima-seco"
+                alt="Clima seco"
+              />
+              <h5 class="title">Menos de 30 años</h5>
+              <div class="selector">
+                <input type="radio" name="card" class="clima-seco" />
+              </div>
+            </div>
+  
+            <div class="card">
+              <img
+                src="../../../../assets/Imagenes/30-50years.jpg"
+                class="poca-lluvia"
+                alt="Lluvia"
+              />
+              <h5 class="card-title">30-50 años</h5>
+              <div class="selector">
+                <input type="radio" name="card" class="poca-lluvia" />
+              </div>
+            </div>
+  
+            <div class="card">
+              <img
+                src="../../../../assets/Imagenes/mas-de-50.jpg"
+                class="lluvia-ocasional"
+                alt="Lluvia ocasional"
+              />
+              <h5 class="card-title">Más de 50 años</h5>
+              <div class="selector">
+                <input type="radio" name="card" class="lluvia-ocasional" />
+              </div>
+            </div>
+          </div>
+  
+          <div class="botones">
+            <div class="anterior">
+              <button type="button" class="btn btn-danger p-2">
+                <a routerLink="/preguntas/s5-p2">Anterior</a>
+              </button>
+            </div>
+  
+            <div class="listo">
+              <button type="button" class="btn btn-success p-2" (click)="validarSeleccion($event)" ><a routerLink="/preguntas/planes">¡Estoy listo!</a></button>
+            </div>
+          </div>
+        </section>
+      </main>
+  
+</body>
