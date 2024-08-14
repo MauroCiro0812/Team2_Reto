@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from '../../navbar/navbar.component';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-s1-p1',
   standalone: true,
-  imports: [NavbarComponent, RouterLinkActive, RouterLink],
+  imports: [NavbarComponent],
   templateUrl: './s1-p1.component.html',
-  styleUrl: './s1-p1.component.css'
+  styleUrls: ['./s1-p1.component.css']
 })
 export class S1P1Component {
 
-  validarSeleccion(event: Event): boolean {
-    // Obtén todos los radio buttons con nombre "card"
+  constructor(private router: Router) {}
+
+  validarSeleccion(): void {
     const radios = document.getElementsByName('card') as NodeListOf<HTMLInputElement>;
     let seleccionado = false;
 
@@ -24,13 +25,10 @@ export class S1P1Component {
       }
     }
 
-    // Si no hay ninguno seleccionado, muestra una alerta
-    if (!seleccionado) {
-      alert('Por favor, selecciona una opción.');
-      event.preventDefault(); // Previene la navegación
-      return false; // Previene la ejecución de cualquier acción posterior
+    if (seleccionado) {
+      this.router.navigate(['/preguntas/s1-p2']);  // Navega si hay una opción seleccionada
+    } else {
+      alert('Por favor, selecciona una opción.');  // Muestra alerta si no hay selección
     }
-
-    return true; // Permite la ejecución de la acción si hay una opción seleccionada
   }
 }
