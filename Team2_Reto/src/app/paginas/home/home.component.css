@@ -99,6 +99,7 @@ nav ul li{
 
 h1{
     color: white;
+    font-size: 60px;
 }
 span{
     color: aqua;
@@ -112,10 +113,18 @@ main{
 }
 
 
-main p, main a{
+main p{
     color: white;
     font-size: 30px;
     font-weight: 90;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+main a{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
     margin-left: 10px;
     text-decoration: none;
 }
@@ -141,7 +150,8 @@ main a:hover{
     width: 35%;
     height: 35%;
     background-color: white;
-    opacity: 0.6;
+    opacity: 0.9;
+    box-shadow: 3px black;
 }
 
 .btn a{
