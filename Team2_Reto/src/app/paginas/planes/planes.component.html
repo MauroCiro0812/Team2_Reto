@@ -1,9 +1,22 @@
 <app-navbar></app-navbar>
 <body>
     <main>
-        <div *ngIf="selectedValue">
-            <p>Has seleccionado: {{ selectedValue }}</p>
-          </div>          
+        <div *ngIf="respuestas$ | async as respuestas">
+            <h2>Respuestas Guardadas</h2>
+            <div *ngFor="let formId of ['s1-p1', 's1-p2', 's2-p1', 's2-p2', 's3-p1', 's3-p2', 's4-p1', 's4-p2', 's5-p1', 's5-p2', 's6-p1']">
+              <div *ngIf="respuestas[formId]">
+                <h3>Formulario {{ formId }}</h3>
+                <p>Respuesta: {{ respuestas[formId] }}</p>
+              </div>
+              <div *ngIf="!respuestas[formId]">
+                <h3>Formulario {{ formId }}</h3>
+                <p>Respuesta: No seleccionada</p>
+              </div>
+            </div>
+          </div>
+          
+          
+            
         <section class="plans">
             <h2>Nuestros Planes Turísticos</h2>
             <div class="plan-card">

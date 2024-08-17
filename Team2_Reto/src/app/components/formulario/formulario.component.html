@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<body>
+  <main id="fondo-imagen">
+    <div class="titulo-destino">  
+      <h2>¿Qué tipo de entorno prefieres para tus vacaciones?</h2>
+    </div>
+    <div class="cards">
+      <div *ngFor="let opcion of opciones" class="card">
+        <label for="{{opcion.value}}">
+        <img [src]="opcion.imageUrl" [alt]="opcion.label" >
+        <h5 class="title">{{ opcion.label }}</h5>
+        <div class="selector">
+          <input type="radio" name="card" [value]="opcion.value" id="{{ opcion.value }}" >
+        </div>
+        </label>
+      </div>
+    </div>
+
+    <div class="botones">
+      <button  (click)="validarSeleccion()" class="btn btn-primary p-2">Siguiente</button>
+    </div>    
+  </main>
+</body>
