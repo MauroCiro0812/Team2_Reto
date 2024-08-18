@@ -101,7 +101,23 @@ export class DataService {
     // Define más rutas para otros formularios aquí
   };
 
-  
+  private previousRoutes: { [key in FormId]: string | null } = {
+    's1-p1': null,
+    's1-p2': '/preguntas/s1-p1',
+    's2-p1': '/preguntas/s1-p2',
+    's2-p2': '/preguntas/s2-p1',
+    's3-p1': '/preguntas/s2-p2',
+    's3-p2': '/preguntas/s3-p1',
+    's4-p1': '/preguntas/s3-p2',
+    's4-p2': '/preguntas/s4-p1',
+    's5-p1': '/preguntas/s4-p2',
+    's5-p2': '/preguntas/s5-p1',
+    's6-p1': '/preguntas/s5-p2',
+  };
+
+  getPreviousRoute(currentFormId: FormId): string | null {
+    return this.previousRoutes[currentFormId];
+  }
 
   getFormOptions(formId: FormId): FormOption[] {
     return this.formOptions[formId] || [];
@@ -117,7 +133,30 @@ export class DataService {
     this.selectedValues.next(currentValues);
   }
 
+
   getSelectedValues(): Observable<{ [key in FormId]: string | null }> {
+    
+    
     return this.selectedValues.asObservable();
+    
+  }
+
+  getSelValues(){
+    const rp=[
+      sessionStorage.getItem('s1-p1'),
+      sessionStorage.getItem('s1-p2'),
+      sessionStorage.getItem('s2-p1'),
+      sessionStorage.getItem('s2-p2'),
+      sessionStorage.getItem('s3-p1'),
+      sessionStorage.getItem('s3-p2'),
+      sessionStorage.getItem('s4-p1'),
+      sessionStorage.getItem('s4-p2'),
+      sessionStorage.getItem('s5-p1'),
+      sessionStorage.getItem('s5-p2'),
+      sessionStorage.getItem('s6-p1'),
+    ]
+    // sessionStorage.removeItem('s1-p1') borrar uno a uno
+    // sessionStorage.clear(); borrar todos
+    return rp;
   }
 }

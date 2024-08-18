@@ -1,11 +1,16 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing:border-box;
 }
 
 body{
     background-color: #060724;
     color: white;
+}
+
+main{
+    background-color: #060724;
 }
 
 header{
@@ -20,7 +25,8 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    flex-direction: row;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
 }
 
 .icono{
@@ -33,7 +39,8 @@ nav{
     display: flex;
     justify-content: center;
     text-align: center;
-    margin: 20px;
+    padding: 30px;
+    margin: 5px;
     
     h2{
         background-color: #060724;
@@ -44,8 +51,10 @@ nav{
 
 .cards{
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
     justify-content: space-around;
+    /* gap: 20px */
 
     h5{
         text-align: center;
@@ -53,7 +62,8 @@ nav{
 }
 
 .card{
-    width: 18rem;
+    width: 100%;
+    max-width: 18rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -108,49 +118,10 @@ nav{
     transform: translate(-50%, -50%);
 }
 
-.continue{
-    display: flex;
-    justify-content: center;
-
-    & .btn a{
-        color: white;
-        text-decoration: none;
-    }
-
-}
-
-main#fondo-imagen {
-    min-height: 100vh; /* Altura mínima para que el fondo sea visible */
-    background-size: cover; /* Asegura que la imagen de fondo cubra todo el main */
-    background-position: center; /* Centra la imagen de fondo */
-}
-
-/*.continue2{
-    display: flex;
-    justify-content: flex-end;
-
-    & .btn a{
-        color: white;
-        text-decoration: none;
-    }
-
-}
-
-.anterior{
-    display: flex;
-    justify-content: flex-end;
-
-    & .btn a{
-        color: white;
-        text-decoration: none;
-    }
-
-}*/
-
 .botones{
     display: flex;
     justify-content: space-around;
-    padding: 10px;
+    padding: 40px;
 
     & .btn a{
         color: white;
@@ -158,6 +129,41 @@ main#fondo-imagen {
     }
 
     & .listo{
-        padding: 30px;
+        padding: 50px;
+    }
+}
+
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: none;
+    }
+
+    .botones {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .botones .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .icono {
+        width: 40px;
+        height: 40px;
+    }
+
+    .titulo-destino h2 {
+        width: 90%;
     }
 }

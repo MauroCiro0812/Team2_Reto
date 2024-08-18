@@ -169,6 +169,7 @@ main a:hover{
 
 
 footer {
+    width: 100vw;
     height: 6rem;
     display: flex;
     align-items: center;
@@ -180,7 +181,19 @@ footer {
     i{
         font-size: 1.5rem;
     }
+    
+    @media (max-width:768px)
+    {
+        .desaparecer{
+            display: none;
+            position: relative;
+            left: 20px;
+            align-items: flex-start;
+        }
+    }
 }
+
+
 
 
 

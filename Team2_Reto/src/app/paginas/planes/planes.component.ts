@@ -14,8 +14,11 @@ import { Observable } from 'rxjs';
 export class PlanesComponent implements OnInit {
   respuestas$: Observable<{ [key: string]: string | null }>;
 
+  resultados:Array<unknown>=[];
+
   constructor(private dataService: DataService) {
     this.respuestas$ = this.dataService.getSelectedValues();
+    this.resultados=dataService.getSelValues();
   }
 
   ngOnInit(): void {

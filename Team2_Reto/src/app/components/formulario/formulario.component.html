@@ -1,8 +1,8 @@
 <app-navbar></app-navbar>
 <body>
-  <main id="fondo-imagen">
+  <main>
     <div class="titulo-destino">  
-      <h2>¿Qué tipo de entorno prefieres para tus vacaciones?</h2>
+      <h2>{{ tituloPregunta }}</h2>
     </div>
     <div class="cards">
       <div *ngFor="let opcion of opciones" class="card">
@@ -17,7 +17,17 @@
     </div>
 
     <div class="botones">
-      <button  (click)="validarSeleccion()" class="btn btn-primary p-2">Siguiente</button>
+      <div class="anterior">
+      <button (click)="irAnterior()" class="btn btn-danger p-2">Anterior</button>
+    </div>
+    <div class="listo">
+    <button (click)="navigateToPlanes()" class="btn btn-success p-2">
+      !Estoy Listo!
+    </button>
+  </div>
+    <div class="continue">
+      <button type="button" (click)="validarSeleccion()" class="btn btn-primary p-2">Siguiente</button>
+    </div>
     </div>    
   </main>
 </body>
