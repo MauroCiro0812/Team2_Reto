@@ -221,6 +221,10 @@ footer {
     
     @media (max-width:768px)
     {
+        div {
+            margin-left: 5%;
+        }
+
         .desaparecer{
             /* display: none; */
             position: relative;
@@ -230,7 +234,15 @@ footer {
     }
 }
 
-
+@media (max-width:768px){
+    .juego div {
+        width: 65% ;
+        height: 30%;
+        background-color: white;
+        opacity: 0.9;
+        box-shadow: 3px black;
+    }
+}
 
 
 
