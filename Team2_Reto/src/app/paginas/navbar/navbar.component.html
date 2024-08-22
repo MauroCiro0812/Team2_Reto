@@ -1,111 +1,111 @@
 <header>
-    <nav>
-      <div>
-        <img class="icono" src="../../../assets/Imagenes/viajar.png" alt="">
-      </div>
-      <ul>
-        <li>
-          <a routerLink="">INICIO</a>
-        </li>
-        <li>
-          <a routerLink="/preguntas/s1-p1">DESTINOS</a>
-        </li>
-      </ul>
-    </nav>
+  <nav>
     <div>
-        <button type="button" class="iniciobutton btn btn-primary p-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Inicio de sesión
-        </button>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <section class="user">
-                  <div class="user_options-container">
-                    <div class="user_options-text">
-                      <div class="user_options-unregistered">
-                        <h2 class="user_unregistered-title">¿No tienes cuenta?</h2>
-                        <button class="user_unregistered-signup" (click)="onSignupClick()">Registrate</button>
-                      </div>
-      
-                      <div class="user_options-registered">
-                        <h2 class="user_registered-title">¿Tienes cuenta?</h2>
-                        <button class="user_registered-login" (click)="onLoginClick()">Inicia Sesión</button>
-                      </div>
+      <img class="icono" src="../../../assets/Imagenes/viaje.gif" alt="">
+    </div>
+    <ul>
+      <li>
+        <a routerLink="">INICIO</a>
+      </li>
+      <li>
+        <a routerLink="/preguntas/s1-p1">DESTINOS</a>
+      </li>
+    </ul>
+  </nav>
+  <div>
+      <button type="button" class="iniciobutton btn btn-primary p-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Inicio de sesión
+      </button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <section class="user">
+                <div class="user_options-container">
+                  <div class="user_options-text">
+                    <div class="user_options-unregistered">
+                      <h2 class="user_unregistered-title">¿No tienes cuenta?</h2>
+                      <button class="user_unregistered-signup" (click)="onSignupClick()">Registrate</button>
                     </div>
-      
-                    <div class="user_options-forms" #userOptionsForms>
-                      <div class="user_forms-login">
-                        <h2 class="forms_title">Inicio de Sesión</h2>
-                        <form class="forms_form">
-                          <fieldset class="forms_fieldset">
-                            <div class="forms_field">
-                              <input type="email" placeholder="Correo Electrónico" class="forms_field-input" required autofocus />
-                            </div>
-                            <div class="forms_field">
-                              <input type="password" placeholder="Contraseña" class="forms_field-input" required />
-                            </div>
-                          </fieldset>
-                          <div class="check">
-                            <input type="checkbox" name="remember" id="remember" required> Recuerdame
-                          </div>
-                          <div class="forms_buttons">
-                            <button type="button" class="forms_buttons-forgot">¿Olvidaste tu contraseña?</button>
-                          </div>
-                          <div class="btn-login">
-                            <input type="submit" value="Iniciar Sesión" class="forms_buttons-action">
-                          </div>
-                          <div class="icons">
-                            <i class="bi bi-facebook"></i>
-                            <i class="bi bi-envelope"></i>
-                            <i class="bi bi-linkedin"></i>
-                          </div>
-                        </form>
-                      </div>
-                      <div class="user_forms-signup">
-                        <h2 class="forms_title">Registro</h2>
-                        <form class="forms_form">
-                          <fieldset class="forms_fieldset">
-                            <div class="forms_field">
-                              <input type="text" placeholder="Nombre Completo" class="forms_field-input" required />
-                            </div>
-                            <div class="forms_field">
-                              <input type="email" placeholder="Correo Electrónico" class="forms_field-input" required />
-                            </div>
-                            <div class="forms_field">
-                              <input type="text" placeholder="Número de Contacto" class="forms_field-input" required />
-                            </div>
-                            <div class="forms_field">
-                              <input type="password" placeholder="Contraseña" class="forms_field-input" required />
-                            </div>
-                            <div class="forms_field">
-                              <input type="password" placeholder="Confirmar Contraseña" class="forms_field-input" required />
-                            </div>
-                            <div class="forms_field">
-                              <input type="date" placeholder="Fecha de Nacimiento" class="forms_field-input" required />
-                            </div>
-                            <div class="check">
-                              <input type="checkbox" name="remember" id="remember" required> Estoy de acuerdo y he leído las 
-                              <a href="https://amadeus.com/es/politicas/politicas-de-amadeus" target="_blank"> Políticas de Privacidad </a>
-                            </div>
-                          </fieldset>
-                          <div class="forms_buttons">
-                            <input type="submit" value="Registrarse" class="forms_buttons-action">
-                          </div>
-                          <div class="icons">
-                            <i class="bi bi-facebook"></i>
-                            <i class="bi bi-envelope"></i>
-                            <i class="bi bi-linkedin"></i>
-                          </div>
-                        </form>
-                      </div>
+    
+                    <div class="user_options-registered">
+                      <h2 class="user_registered-title">¿Tienes cuenta?</h2>
+                      <button class="user_registered-login" (click)="onLoginClick()">Inicia Sesión</button>
                     </div>
                   </div>
-                </section>
-              </div>
+    
+                  <div class="user_options-forms" #userOptionsForms>
+                    <div class="user_forms-login">
+                      <h2 class="forms_title">Inicio de Sesión</h2>
+                      <form class="forms_form">
+                        <fieldset class="forms_fieldset">
+                          <div class="forms_field">
+                            <input type="email" placeholder="Correo Electrónico" class="forms_field-input" required autofocus />
+                          </div>
+                          <div class="forms_field">
+                            <input type="password" placeholder="Contraseña" class="forms_field-input" required />
+                          </div>
+                        </fieldset>
+                        <div class="check">
+                          <input type="checkbox" name="remember" id="remember" required> Recuerdame
+                        </div>
+                        <div class="forms_buttons">
+                          <button type="button" class="forms_buttons-forgot">¿Olvidaste tu contraseña?</button>
+                        </div>
+                        <div class="btn-login">
+                          <input type="submit" value="Iniciar Sesión" class="forms_buttons-action">
+                        </div>
+                        <div class="icons">
+                          <i class="bi bi-facebook"></i>
+                          <i class="bi bi-envelope"></i>
+                          <i class="bi bi-linkedin"></i>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="user_forms-signup">
+                      <h2 class="forms_title">Registro</h2>
+                      <form class="forms_form">
+                        <fieldset class="forms_fieldset">
+                          <div class="forms_field">
+                            <input type="text" placeholder="Nombre Completo" class="forms_field-input" required />
+                          </div>
+                          <div class="forms_field">
+                            <input type="email" placeholder="Correo Electrónico" class="forms_field-input" required />
+                          </div>
+                          <div class="forms_field">
+                            <input type="text" placeholder="Número de Contacto" class="forms_field-input" required />
+                          </div>
+                          <div class="forms_field">
+                            <input type="password" placeholder="Contraseña" class="forms_field-input" required />
+                          </div>
+                          <div class="forms_field">
+                            <input type="password" placeholder="Confirmar Contraseña" class="forms_field-input" required />
+                          </div>
+                          <div class="forms_field">
+                            <input type="date" placeholder="Fecha de Nacimiento" class="forms_field-input" required />
+                          </div>
+                          <div class="check">
+                            <input type="checkbox" name="remember" id="remember" required> Estoy de acuerdo y he leído las 
+                            <a href="https://amadeus.com/es/politicas/politicas-de-amadeus" target="_blank"> Políticas de Privacidad </a>
+                          </div>
+                        </fieldset>
+                        <div class="forms_buttons">
+                          <input type="submit" value="Registrarse" class="forms_buttons-action">
+                        </div>
+                        <div class="icons">
+                          <i class="bi bi-facebook"></i>
+                          <i class="bi bi-envelope"></i>
+                          <i class="bi bi-linkedin"></i>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </div>
       </div>
-      
-  </header>
+    </div>
+    
+</header>

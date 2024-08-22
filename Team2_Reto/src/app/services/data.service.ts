@@ -154,9 +154,12 @@ export class DataService {
       sessionStorage.getItem('s5-p1'),
       sessionStorage.getItem('s5-p2'),
       sessionStorage.getItem('s6-p1'),
-    ]
+    ] 
     // sessionStorage.removeItem('s1-p1') borrar uno a uno
     // sessionStorage.clear(); borrar todos
     return rp;
   }
+
+
 }
+

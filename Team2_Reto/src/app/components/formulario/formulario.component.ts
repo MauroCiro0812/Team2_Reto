@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../../services/data.service';
 import { NavbarComponent } from '../../paginas/navbar/navbar.component';
 import { NgFor } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 interface FormOption {
   value: string;
@@ -16,7 +17,7 @@ type FormId = 's1-p1' | 's1-p2' | 's2-p1' | 's2-p2' | 's3-p1' | 's3-p2' | 's4-p1
 @Component({
   selector: 'app-formulario',
   standalone: true,
-  imports: [NavbarComponent, NgFor],
+  imports: [NavbarComponent, NgFor, CommonModule],
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.css']
 })
@@ -26,6 +27,8 @@ export class FormularioComponent implements OnInit {
   siguienteRuta: string = '';
   rutaAnterior: string = '';
   tituloPregunta: string = '';
+  selectedOption: string= '';
+  backgroundImageUrl: string = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -46,13 +49,31 @@ export class FormularioComponent implements OnInit {
     }
   }
 
+  onOptionChange(value: string): void {
+    this.selectedOption = value;
+    const selectedOption = this.opciones.find(op => op.value === value);
+    this.backgroundImageUrl = selectedOption ? selectedOption.imageUrl : '';
+  }
+
   navigateToPlanes(): void {
-    this.router.navigate(['/planes']);
+    const radios = document.getElementsByName('card') as NodeListOf<HTMLInputElement>;
+    for (let i = 0; i < radios.length; i++) {
+      if (radios[i].checked) {
+        const formId = this.route.snapshot.paramMap.get('id') as FormId;
+        if (this.isFormId(formId)) {
+          this.dataService.setSelectedValue(formId, radios[i].value);
+          sessionStorage.setItem(formId, radios[i].value);
+          this.router.navigate(['/planes']);
+        }
+        return;
+      }
+    }
+    alert('Por favor, selecciona una opción.');
   }
 
   isLastQuestion(): boolean {
     const formId = this.route.snapshot.paramMap.get('id') as FormId;
-    return formId === 's6-p1'; // O cualquier otro ID de la última pregunta
+    return formId === 's6-p1';
   }
 
 

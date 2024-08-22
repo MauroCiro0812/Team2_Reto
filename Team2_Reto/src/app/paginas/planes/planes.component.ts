@@ -13,6 +13,7 @@ import { Observable } from 'rxjs';
 })
 export class PlanesComponent implements OnInit {
   respuestas$: Observable<{ [key: string]: string | null }>;
+  mostrarResultados: boolean = false; // Variable para controlar la visibilidad
 
   resultados:Array<unknown>=[];
 
@@ -24,4 +25,9 @@ export class PlanesComponent implements OnInit {
   ngOnInit(): void {
     // No es necesario agregar nada aquí, pero puedes hacerlo si es necesario
   }
+
+    // Método para alternar la visibilidad de los resultados
+    toggleResultados(): void {
+      this.mostrarResultados = !this.mostrarResultados;
+    }
 }

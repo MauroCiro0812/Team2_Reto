@@ -38,7 +38,7 @@ import { PlanesComponent } from './paginas/planes/planes.component';
 export const routes: Routes = [
   { path: 'preguntas/:id', component: FormularioComponent },
   { path: '', component: HomeComponent},
-  { path: 'planes', component: PlanesComponent}
+  { path: 'planes', component: PlanesComponent},
   // { path: '', redirectTo: 'preguntas/s1-p1', pathMatch: 'full' }, // Ruta por defecto
   // Otras rutas según sea necesario
 ];

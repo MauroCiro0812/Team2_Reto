@@ -77,6 +77,18 @@ section h2{
 
 }
 
+.tx-sty{
+	color: #ffffff;
+    font-size: 26px;
+	-webkit-text-stroke: 0.4px black;
+    text-shadow:
+    3px 3px 0 #000,
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+   -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
 .btn-reservar {
     background-color: #4CAF50;
     color: #fff;

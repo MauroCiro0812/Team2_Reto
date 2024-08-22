@@ -10,14 +10,21 @@
 }
 
 header{
-    height: 4rem;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
     background-color: white;
-    color: black;
-    padding: 40px;
+    color: #ffffff;
+    height: 4rem;
+    color: rgb(255, 255, 255);
+    padding: 20px 10%;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-shadow: #060724;
 }
 
 
@@ -100,16 +107,21 @@ nav ul li{
 h1{
     color: white;
     font-size: 60px;
-}
+    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+      -1px 1px 0 #000, 1px 1px 0 #000;}
 span{
-    color: aqua;
+    color: #00abf0;
 }
  
 main{
-    background-image: url(../../../assets/Imagenes/imagen.jpg);
-    background-repeat: no repeat;
+    height: 100vh;
+    display: flex;
+    padding: 70px 0;
+    background-image: url(../../../assets/Imagenes/Mountain.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
+    align-items: center;
 }
 
 
@@ -119,6 +131,9 @@ main p{
     font-weight: 90;
     margin-left: 10px;
     text-decoration: none;
+    -webkit-text-stroke: 1px #f7f3f3;
+    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+      -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 main a{
@@ -159,14 +174,36 @@ main a:hover{
     text-decoration: none;
 }
 
+.btn-box a {
+    display: inline-flex;
+    justify-content: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 25px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+.btn-box a:nth-child(1) {
+    background: transparent;
+    color: #ffffff;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), #00abf0);
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    animation: span1 2s linear infinite;
+    animation-delay: 1s;
+  }
 
 .juego div p{
     margin-top: 10%;
     color: black;
     opacity: 1;
 }
-
-
 
 footer {
     width: 100vw;
@@ -185,7 +222,7 @@ footer {
     @media (max-width:768px)
     {
         .desaparecer{
-            display: none;
+            /* display: none; */
             position: relative;
             left: 20px;
             align-items: flex-start;

@@ -1,16 +1,16 @@
 <app-navbar></app-navbar>
 <body>
-  <main>
+  <main [ngStyle]="{ 'background-image': 'url(' + backgroundImageUrl + ')' }">
     <div class="titulo-destino">  
       <h2>{{ tituloPregunta }}</h2>
     </div>
     <div class="cards">
-      <div *ngFor="let opcion of opciones" class="card">
+      <div *ngFor="let opcion of opciones" class="card" >
         <label for="{{opcion.value}}">
         <img [src]="opcion.imageUrl" [alt]="opcion.label" >
         <h5 class="title">{{ opcion.label }}</h5>
         <div class="selector">
-          <input type="radio" name="card" [value]="opcion.value" id="{{ opcion.value }}" >
+          <input type="radio" name="card" [value]="opcion.value" id="{{ opcion.value }}" (change)="onOptionChange(opcion.value)">
         </div>
         </label>
       </div>
@@ -20,12 +20,12 @@
       <div class="anterior">
       <button (click)="irAnterior()" class="btn btn-danger p-2">Anterior</button>
     </div>
-    <div class="listo">
+    <div class="listo" *ngIf="isLastQuestion()">
     <button (click)="navigateToPlanes()" class="btn btn-success p-2">
       !Estoy Listo!
     </button>
   </div>
-    <div class="continue">
+    <div class="continue" *ngIf="!isLastQuestion()">
       <button type="button" (click)="validarSeleccion()" class="btn btn-primary p-2">Siguiente</button>
     </div>
     </div>    
